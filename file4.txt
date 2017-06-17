@@ -1,0 +1,3 @@
+modified file4.txt for cchecking git commit command with
+-am options
+
