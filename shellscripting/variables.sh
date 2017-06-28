@@ -22,11 +22,8 @@ echo "Please enter a value for COMPNAME:"
 read COMPNAME
 echo " The value of COMPNAME as defined by user is $COMPNAME"
 
-#Learning the difference between '(SingleQuote),"(DoubleQuote) and `(Backtick)
+#Learning/Understanding the difference between '(SingleQuote),"(DoubleQuote), `(Backtick) and \(Escape Character)
 COMMAND1=date
 echo "The value of \$COMMAND1 in SingleQuote is \$COMMAND1"
 echo "The value of \$COMMAND1 in DoubleQuote is $COMMAND1"
 echo "The value of \$COMMAND1 in BackTick is `$COMMAND1`"
-
-
-
