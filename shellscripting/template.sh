@@ -1,8 +1,9 @@
 #!/bin/bash
 ###############################
-#Purpose  : This is the template to be used
+#Purpose  : 
 #Version  : 1.0
 #Owner	  : tk@keerthinag.com
-#Input 	  : 
-#Output   : 
+#Input 	  : none 
+#Output   : Displaying message on screen
 ###############################
+
