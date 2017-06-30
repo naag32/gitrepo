@@ -1,10 +1,10 @@
 #!/bin/bash
 ############################
-#Purpose        : To learn Shell Scripting
+#Purpose        : To work with logical test for Shell Scripting
 #Version        : 1.0
 #Owner          : tk
-#Input          : None
-#Output         : None
+#Input          : Student Name and Student Marks
+#Output         : Result will be printed on screen
 #############################
 
 STNAME=$1
