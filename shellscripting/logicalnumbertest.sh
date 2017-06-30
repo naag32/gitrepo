@@ -1,34 +1,46 @@
 #!/bin/bash
-###############################
-#Purpose  : This program is for numbertest using passing by arguments and logical checks as well
-#Version  : 1.0
-#Owner	  : tk@keerthinag.com
-#Input 	  : none 
-#Output   : Displaying message on screen
-###############################
+############################
+#Purpose        : To learn Shell Scripting
+#Version        : 1.0
+#Owner          : tk
+#Input          : None
+#Output         : None
+#############################
 
-NAME=$1
-MARKS=$2
-#Checking whethe user passed arguments or not
-if [ "!$NAME" ]; then 
-echo "Please enter the student name"
-echo "Usage: $0 <Name>"
+STNAME=$1
+STMARKS=$2
+
+#To check whether user passed any value as argument
+if [ ! "$STNAME" ]; then
+echo "Please enter a student name and student marks"
+echo "Usage: $0 <studentname> <studentmarks>"
 exit
 fi
 
-if [ "!$MARKS" ]; then 
-echo "Please enter the student marks"
-echo "Usage: $0 <Name> <Marks>"
+#To check whether user passed both the arguments or not
+if [ ! "$STMARKS" ]; then
+echo "You didn't enter studentmarks"
+echo "Usage: $0 <studentname> <studentmarks>"
 exit
 fi
 
-if [ "$MARKS" -gt 65 ]; then
-echo "Student Result : FIRST CLASS"
-elif [ "$MARKS" -gt 55 ]; then
-echo "Student Result : SECOND CLASS"
-elif [ "$MARKS" -gt 45 ]; then
-echo "Student Result : THIRD CLASS"
+#Checking if the user passed valid marks or not
+if [ "$STMARKS" -lt 0 -o "$STMARKS" -gt 100 ]; then
+echo "Please enter marks between 0 to 100"
+echo " -- Ending here --"
+exit
+fi
+
+#Checking the grade of the student
+if [ "$STMARKS" -ge 70 -a "$STMARKS" -le 100 ]; then
+echo "Congratulations, You are awarded Distinction !!!!"
+elif [ "$STMARKS" -ge 60 -a "$STMARKS" -lt 70 ]; then
+echo "Congratulations, First Class"
+elif [ "$STMARKS" -ge 50 -a "$STMARKS" -lt 60 ]; then
+echo "Congratulations, Second Class"
+elif [ "$STMARKS" -ge 40 -a "$STMARKS" -lt 50 ]; then
+echo "Congratulations, Third Class"
 else
-echo "Student Result : FAIL !!!!"
+echo "FAIL FAIL FAIL !!!!!"
+exit
 fi
-
